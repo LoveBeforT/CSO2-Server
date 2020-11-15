@@ -42,9 +42,12 @@ const (
 	MAXSERVERNUM        = 15
 	MAXCHANNELROOMNUM   = 0xFF
 	MAXROOMNUM          = 0xFFFF
-	DefalutServerName   = "CSO2-Server[1/1]"
-	DefalutChannelName1 = "CSO2-Channel[1/2]"
-	DefalutChannelName2 = "CSO2-Channel[2/2]"
+	DefalutServerName   = "#CSO2_CHANNEL_NAME_NORMAL" // sample cso2_english.txt would be easier to read. can you set it?
+	DefalutChannelName1 = "#CSO2_CHANNEL_NAME_NEWBIE" // sample cso2_english.txt would be easier to read. can you set it?
+	DefalutChannelName2 = "#CSO2_CHANNEL_NAME_BEGINNER" // sample cso2_english.txt would be easier to read. can you set it?
+	// If you can add 2 more servers, do them too
+	// #CSO2_CHANNEL_SCENARIO
+	// #CSO2_CHANNEL_BIGCITY
 
 	//貌似非3以外的都被客户端认为是战队频道
 	ChannelServerTypeNormal = 1
