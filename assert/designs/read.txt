@@ -1,0 +1,31 @@
+-------------------
+-site design setup-
+-------------------
+
+[English]
+Thanks for installing the server, install the xampp program for the site to work properly
+1.Install xampp > https://www.apachefriends.org/tr/index.html
+2.install complete
+3.C:\xampp\htdocs (css. img. js. fonts. or other) drop these files here C:\xampp\htdocs
+4.C:\xampp\apache\conf\httpd.conf 
+Find the text called 'Listen 80' and do so
+Listen 80 > Listen 8081
+5.save and start xampp program give apache start
+6.set the design according to your address 127.0.01:8081 (index.html . download.html . about.html . register.html . other) edit and saved
+Congratulations.
+
+[Chinese]
+感谢您安装服务器，请安装xampp程序以使站点正常运行
+1.安装xampp> https://www.apachefriends.org/tr/index.html
+2.安装完成
+3.C:\xampp\htdocs（css，img，js，字体或其他）将这些文件放在此处C:\xampp\htdocs
+4，C:\xampp\apache\conf\httpd.conf
+找到名为“ Listen 80”的文本，然后执行此操作
+听80>听8081
+5，保存并启动xampp程序使apache启动
+6.根据您的地址设置设计127.0.01：8081（index.html。download.html。about.html。register.html .other）编辑并保存
+恭喜你
+
+------------------------------------------------
+-[Suggest corrections for misspelled articles!]-
+------------------------------------------------
