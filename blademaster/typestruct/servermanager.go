@@ -47,13 +47,13 @@ const (
 	DefalutChannelName1 = "Channel 1"
 	DefalutChannelName2 = "Channel 2"
 	DefalutChannelName3 = "Channel 3"
-	DefalutChannelName4 = "Channel 5"
+	DefalutChannelName4 = "Channel 4"
 	
 	ClanServerName   = "Clan Server"
 	ClanChannelName1 = "Channel 1"
 	ClanChannelName2 = "Channel 2"
 	ClanChannelName3 = "Channel 3"
-	ClanChannelName4 = "Channel 5"
+	ClanChannelName4 = "Channel 4"
 
 	//貌似非3以外的都被客户端认为是战队频道
 	ChannelServerTypeNormal = 1
