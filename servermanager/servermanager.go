@@ -37,6 +37,48 @@ func NewMainServer() ServerManager {
 		DebugInfo(2, "Error : Unable to initializing main server !")
 		log.Fatalln("")
 	}
+	chl3 := NewChannelInfo([]byte(DefalutChannelName3), chlsrv)
+	if !AddChannel(&chlsrv, &chl3) {
+		DebugInfo(2, "Error : Unable to initializing main server !")
+		log.Fatalln("")
+	}
+	chl4 := NewChannelInfo([]byte(DefalutChannelName4), chlsrv)
+	if !AddChannel(&chlsrv, &chl4) {
+		DebugInfo(2, "Error : Unable to initializing main server !")
+		log.Fatalln("")
+	}
+	chl5 := NewChannelInfo([]byte(DefalutChannelName5), chlsrv)
+	if !AddChannel(&chlsrv, &chl5) {
+		DebugInfo(2, "Error : Unable to initializing main server !")
+		log.Fatalln("")
+	}
+	ch2srv := NewChannelServer([]byte(ClanServerName))
+	chl1 := NewChannelInfo([]byte(ClanChannelName1), ch2srv)
+	if !AddChannel(&ch2srv, &chl1) ||
+		!AddChannelServer(&srvmgr, &ch2srv) {
+		DebugInfo(2, "Error : Unable to initializing main server !")
+		log.Fatalln("")
+	}
+	chl2 := NewChannelInfo([]byte(ClanChannelName2), ch2srv)
+	if !AddChannel(&ch2srv, &chl2) {
+		DebugInfo(2, "Error : Unable to initializing main server !")
+		log.Fatalln("")
+	}
+	chl3 := NewChannelInfo([]byte(ClanChannelName3), ch2srv)
+	if !AddChannel(&ch2srv, &chl3) {
+		DebugInfo(2, "Error : Unable to initializing main server !")
+		log.Fatalln("")
+	}
+	chl4 := NewChannelInfo([]byte(ClanChannelName4), ch2srv)
+	if !AddChannel(&ch2srv, &chl4) {
+		DebugInfo(2, "Error : Unable to initializing main server !")
+		log.Fatalln("")
+	}
+	chl5 := NewChannelInfo([]byte(ClanChannelName5), ch2srv)
+	if !AddChannel(&ch2srv, &chl5) {
+		DebugInfo(2, "Error : Unable to initializing main server !")
+		log.Fatalln("")
+	}
 	return srvmgr
 }
 
