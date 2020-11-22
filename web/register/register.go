@@ -94,7 +94,8 @@ func OnMain(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	//发送主页面
-	t, err := template.ParseFiles(path + "/CSO2-Server/assert/web/index.html")
+	//转发（着陆页）cso2server.xxx/landing/index.html
+	t, err := template.ParseFiles(path + "/CSO2-Server/assert/web/landing/index.html")
 	if err != nil {
 		DebugInfo(2, err)
 		return
@@ -109,7 +110,8 @@ func Register(w http.ResponseWriter, r *http.Request) {
 		DebugInfo(2, err)
 		return
 	}
-	t, err := template.ParseFiles(path + "/CSO2-Server/assert/web/register.html")
+	//使用首页上的所有功能
+	t, err := template.ParseFiles(path + "/CSO2-Server/assert/web/main/index.html")
 	if err != nil {
 		DebugInfo(2, err)
 		return
@@ -255,7 +257,7 @@ func OnDownload(w http.ResponseWriter, r *http.Request) {
 		DebugInfo(2, err)
 		return
 	}
-	file, err := os.Open(path + "/CSO2-Server/assert/web/download.html")
+	file, err := os.Open(path + "/CSO2-Server/assert/web/main/download.html")
 	if err != nil {
 		DebugInfo(2, err)
 		return
