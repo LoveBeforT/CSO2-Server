@@ -42,9 +42,9 @@ const (
 	MAXSERVERNUM        = 15
 	MAXCHANNELROOMNUM   = 0xFF
 	MAXROOMNUM          = 0xFFFF
-	DefalutServerName   = "CSO2-Server[1/1]"
-	DefalutChannelName1 = "CSO2-Channel[1/2]"
-	DefalutChannelName2 = "CSO2-Channel[2/2]"
+	DefalutServerName   = "한국 서버"
+	DefalutChannelName1 = "채널 1"
+	DefalutChannelName2 = "채널 2"
 
 	//貌似非3以外的都被客户端认为是战队频道
 	ChannelServerTypeNormal = 1
