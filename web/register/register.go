@@ -29,8 +29,8 @@ var (
 		"",
 		"",
 		"",
-		"CSO2-Server",
-		"注册验证码",
+		"Counter-Strike Online 2",
+		"Do not share your password with anyone!",
 		"",
 	}
 )
