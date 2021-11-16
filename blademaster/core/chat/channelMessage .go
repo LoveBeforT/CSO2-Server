@@ -57,5 +57,6 @@ func OnChatChannelMessage(p *InChatPacket, client net.Conn) {
 }
 
 func BuildChannelMessage(u *User, p *InChatPacket) []byte {
-	return BytesCombine([]byte("["+GAME_CHANNEL_MESSAGE+"] "+u.UserName+" : "), p.Message)
+	// when this command channel is selected, no one but you can see the words you type in the chat - unnecessary use or repair
+	// return BytesCombine([]byte("["+GAME_CHANNEL_MESSAGE+"] "+u.UserName+" : "), p.Message)
 }
