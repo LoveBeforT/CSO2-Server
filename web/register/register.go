@@ -73,12 +73,13 @@ func OnMain(w http.ResponseWriter, r *http.Request) {
 		DebugInfo(2, err)
 		return
 	}
-	//检索请求url
+	//Web Files // Add more folders for designs.
 	web_dir := path + "/CSO2-Server/assert/web"
 	if strings.HasPrefix(r.URL.Path, "/img/") ||
 		strings.HasPrefix(r.URL.Path, "/images/") ||
 		strings.HasPrefix(r.URL.Path, "/css/") ||
 		strings.HasPrefix(r.URL.Path, "/js/") ||
+		strings.HasPrefix(r.URL.Path, "/assets/") ||
 		strings.HasPrefix(r.URL.Path, "/fonts/") ||
 		strings.HasPrefix(r.URL.Path, "/update/") ||
 		strings.HasPrefix(r.URL.Path, "/notice/") ||

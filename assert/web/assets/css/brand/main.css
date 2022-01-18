@@ -1,0 +1,48 @@
+@charset "utf-8";
+#wrapper.intro{background:url("../../../assets/img/cbt1/intro/back.jpg") center 0 no-repeat;background-size: cover;}
+#back{position:fixed;top:0;left:0;}
+.cover{position: absolute;width: 100%;height: 100%;left: 0;top: 0;background:url("../../../assets/img/cbt1/intro/cover.png") center 0 repeat-x;}
+.intro .section{position: relative;width: 1280px;margin: 0 auto;height: 100%;text-align: center;}
+.intro h1{position: relative;width:532px;height: 300px;background:url("../../../assets/img/cbt1/intro/logo_plus.png") no-repeat;margin: 180px auto 0 auto;text-indent: -100000px;overflow: hidden;}
+.intro #container{padding-bottom: 90px;}
+
+.btn_play{position: relative;height: 74px;margin: 50px auto 80px auto;font-size: 0;}
+.btn_play button{display: inline-block;width:266px;height: 100%;background:url("../../../assets/img/brand/intro/btn_play.png") no-repeat;font-size: 20px;color: #fff;letter-spacing: -0.02em;line-height: 74px;text-indent: 85px;margin: 0 5px;text-align: left;}
+.btn_play button:hover{background-position-y: 100%;}
+.schedule{position: relative;width:883px;height: 244px;margin: 0 auto;text-align: left;}
+.schedule li{font-size: 16px;letter-spacing: -0.02em;margin-bottom: 7px;color: #c5c5c5}
+.schedule li:before{content: '';width: 6px;height: 6px;background-color:#715646;transform: rotate(45deg);display: inline-block;margin-right: 5px;vertical-align: middle;margin-top: -4px;}
+.schedule li:first-child{color: #fff;font-weight: 400;}
+.schedule li:first-child span{font-weight: 400;}
+.schedule.evt li:first-child{color: #c5c5c5;font-weight: 300;}
+.schedule.evt li:first-child span{font-weight: 300;}
+.schedule li span{display: inline-block;color: #BB9364;background:url("../../../assets/img/cbt1/sub/ico_gubun.png") right 50% no-repeat;margin-right: 5px;padding-right: 8px;}
+.game_area{position: absolute;right: 198px;bottom: 0;background:url("../../../assets/img/cbt1/intro/btn_start.png") no-repeat;width: 390px;height: 244px;}
+.game_area.on{background:url("../../../assets/img/cbt1/intro/btn_start_over.png") no-repeat}
+.game_area button{position: absolute;left: 0;width: 50%;font-size: 18px;letter-spacing: -0.02em;line-height: 77px;color: #fff;font-weight: 500;}
+.game_area button:hover{text-decoration: underline;}
+.game_area .btn_game_start{width: 100%;height: 167px;top: 0;text-indent: -100000px;overflow: hidden;}
+.game_area .btn_game_down{height: 77px;bottom: 0;}
+.game_area .my_pc{height: 77px;bottom: 0;left: 50%;}
+
+.btn_quick{position: fixed;width: 218px;height: 239px;right: 117px;top: 200px;background:url("../../../assets/img/cbt1/intro/btn_quick.png") no-repeat;text-indent: -100000px;overflow: hidden;}
+.btn_quick:hover{background-position-y: 100%;}
+#container .btn_tester{position: absolute;width:116px;height: 80px;background:url("../../../assets/img/cbt1/intro/spr_button.png") no-repeat;left: 0;bottom: 0;}
+#container .btn_tester.done{background-position-y: 100%;}
+#container .btn_tester span{position: absolute;left: 100px;top: 27px;transition: left 1s ease;font-family: 'Nanum Myeongjo';font-size: 24px;letter-spacing: -0.04em;color: #fff;font-weight: 400;}
+#container .btn_tester:after{content: '';position: absolute;width: 29px;height: 14px;top: 33px;right: 47px;background:url("../../../assets/img/cbt1/intro/btn_tester.png") -280px -223px no-repeat;opacity: 0;transition: all .5s ease;}
+#container .btn_tester:hover{background-position-y: -90px;}
+#container .btn_tester:hover span{left: 45px;}
+#container .btn_tester:hover:after{opacity: 1;right: 37px;}
+#container .btn_tester.done{background-position-y: 100%;}
+#container .btn_tester.done span,
+#container .btn_tester.done:hover span{left: 124px;}
+#container .btn_tester.done:hover{background-position-y: 100% !important;}
+#container .btn_tester.done:hover:after{opacity: 0}
+.thanks{position: relative;width:100%;margin: 20px auto 0 auto;text-align: center;font-weight: 400;font-size: 24px;line-height: 36px;letter-spacing: -0.02em;color: #fff;}
+.thanks strong{color: #EEBD51;font-weight: 400;display: block;}
+
+@media screen and (max-height: 1200px) {
+	.intro .section{margin-top: -110px}
+
+}

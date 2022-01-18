@@ -45,7 +45,7 @@ import (
 
 var (
 	//SERVERVERSION 版本号
-	SERVERVERSION = "v0.5.0"
+	SERVERVERSION = "v0.5.1"
 )
 
 func ReadHead(client net.Conn) ([]byte, bool) {
@@ -254,6 +254,15 @@ func main() {
 	if Conf.EnableConsole != 0 {
 		go InitGMconsole()
 	}
+	// Submit user data to database within 5 seconds. (I think it prevents user data from being lost when shutting down the server without saving.)
+		for {
+			<-time.After(5 * time.Second)
+				if SaveAllUsers() { 
+					fmt.Println("Save all users data success !")
+				} else {
+				fmt.Println("Save all users data failed !")
+				}
+			}
 
 	ch := make(chan os.Signal)
 	defer close(ch)
@@ -288,6 +297,10 @@ func TCPServer(server net.Listener) {
 			DebugInfo(2, "Server accept data error !\n")
 			continue
 		}
+		// When someone connects to the server, reconnect to the mysql server at the same time - so when newly registered players log in to the game, their account will be seen by the server. not a clear solution. It's a temporary solution but I think you can find a good solution for this.
+		InitBloomFilter()
+		// Develop the Init Bloom Filter method. and new tables added to user data are excluded by the server and prevent login. For example, when the php method creates mandatory member verification code or member security code tables and user data is written in phpmyadmin, the server excludes it. -
+		// Note: when making your own launcher, please do not query port 3001 in c# or php. Due to the connection limit in mysql, incoming connection queries are locked by mysql. the mysql server for the server may stop responding.
 		DebugInfo(2, "Server accept a new connection request at", client.RemoteAddr().String())
 		go RecvMessage(client)
 	}
@@ -301,7 +314,7 @@ func RecvMessage(client net.Conn) {
 	defer client.Close() //关闭con
 	defer func() {
 		if err := recover(); err != nil {
-			OnSendMessage(&seq, client, MessageDialogBox, GAME_SERVER_ERROR)
+			OnSendMessage(&seq, client, MessageDialogBox, CSO2_ServerMessage_SysError)
 			fmt.Println("Client", client.RemoteAddr().String(), "suffered a fault !")
 			fmt.Println(err)
 			fmt.Println("dump data", dataPacket.Data, "offset:", dataPacket.CurOffset)

@@ -1,0 +1,10 @@
+@charset "utf-8";
+@import url('../../liveweb/classicRPG/policy.css');
+
+/* HP  */
+.hp #header:before, .hp #lnb .on a, .hp #lnb a:hover, .hp .btn_top a:hover{background:#886f62}
+.hp #header h1 .logo{width:82px;height:36px;background:url(../../../../../lwi.nexon.com/hp/cbt1/common/logo_operation.png) no-repeat;margin-top:29px}
+
+/* content */
+.hp .main .content_wrap .indent.depth3{padding-left:44px}
+.main .content_wrap table tbody th{padding:14px 0;background:#F3F5F6;}
