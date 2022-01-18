@@ -1,0 +1,53 @@
+@import url('../font.css');
+/* reset style [start] */
+html, body, div, span, applet, object, iframe, button,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+textarea, b, u, i, center, input,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, hr {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-weight: 300;
+	font-family:'Noto Sans KR', 'Malgun Gothic', '돋움' , Apple Gothic , Tahoma, Verdana, sans-serif;
+	word-break:break-all;word-wrap:break-word
+}
+html {min-width:855px;-webkit-text-size-adjust:none;background-color: #1a1a1a;}
+html.noscroll{overflow:hidden}
+img,fieldset{border:0}
+ul,ol{list-style:none}
+em,address{font-style:normal}
+a{text-decoration:none}
+a:focus, button:focus{outline: none}
+.blind, legend{position:absolute;left:-1000%; top:0; width:1px; height:1px; font-size:0; line-height:0; overflow:hidden;text-indent:-10000px;background: none !important} /* 숨김 */
+caption{left:-1000%; top:0; width:1px; height:1px; font-size:0; line-height:0; overflow:hidden;text-indent:-10000px} /* 숨김 */
+button{border:0;cursor:pointer;*overflow:visible;vertical-align:top;background:transparent;font-weight: 400;}
+table{border-collapse:collapse;border-spacing:0}
+::-webkit-input-placeholder {color:#715646;font-size: 18px;}
+::-moz-placeholder {color:#715646;font-size: 18px;}
+:-ms-input-placeholder {color:#715646;font-size: 18px;}
+input:-moz-placeholder {color:#715646;font-size: 18px;}
+
+
+/* common */
+#wrapper{position:relative;background:#1a1a1a url('../../../../../lwi.nexon.com/hp/cbt1/common/layer_bg.png') center 0 no-repeat;border-top: 1px solid #6b6059;box-sizing: border-box}
+#container {position:relative;width:855px;height: 100%;z-index: 3;margin: 0 auto;box-sizing: border-box;color: #6b6059;padding: 50px;}
+.btn_check{position: absolute;right: 1px;top: 51px;background-color:#1a1a1a;width: 376px;height: 299px;}
+.btn_check button{position: absolute;background:url('../../../../../lwi.nexon.com/hp/cbt1/sub/btn_pcspec.png') no-repeat;width: 260px;height: 72px;left: 50%;margin-left: -130px;top: 122px;text-indent: -100000px;overflow: hidden;}
+.btn_check button:hover{background-position-y:100%;}
+.btn_area{position:relative;width: 100%;height: 52px;text-align: center;margin-top:45px;font-size: 0;}
+.btn_area button,
+.btn_area a{display: inline-block;margin-right:4px;line-height: 52px;width: 226px;height: 100%;font-size: 18px;color:#fff;box-sizing: border-box;background:url('../../../../../lwi.nexon.com/hp/cbt1/common/layer_ok.png') no-repeat}
+.btn_area button.btn_cancel{background:url('../../../../../lwi.nexon.com/hp/cbt1/common/layer_cancel.png') no-repeat}
+h1{display: block;font-size: 18px;line-height: 20px;letter-spacing: -0.02em;color: #FFF;font-weight: 400;margin-bottom: 10px;}
+p{font-size: 16px;line-height: 20px;letter-spacing: -0.02em;color: #6B6059;}
+strong{font-size: 16px;line-height: 30px;letter-spacing: -0.02em;color: #715646;display: block;}
+.table{position:relative;border-top: 1px solid #332F2A;width: 100%;letter-spacing: -0.025em;margin-bottom:5px;font-size: 16px;margin: 15px 0;text-align: center;}
+.table th{border: 1px solid #332F2A;border-top: 0;color: #BB9364;font-weight: 400;height: 50px;}
+.table tbody th{text-indent:20px;text-align: left;padding: 13px;box-sizing: border-box;height: 60px;}
+.table td{border: 1px solid #332F2A;border-top: 0;border-bottom: 1px solid #332F2A;padding: 13px;color: #6B6059;text-indent:20px;}
+

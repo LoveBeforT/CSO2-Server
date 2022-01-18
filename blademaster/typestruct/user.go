@@ -56,6 +56,7 @@ type (
 		SkillZombieCurXp     uint64
 		SkillZombieMaxXp     uint64
 		SkillZombiePoints    uint8
+		Banned        		 []byte //Create function to ban user's account! 0/1
 		UserMail             string
 		//连接
 		CurrentConnection net.Conn `json:"-"`
@@ -512,6 +513,7 @@ func GetNewUser() User {
 		0,      //skillZombieCurXp
 		0x16F6, //skillZombieMaxXp
 		0,      //skillZombiePoints
+		NewNullString(), //Create function to ban user's account! 0/1
 		"",     //mail
 		nil,    //connection
 		1,      //serverid

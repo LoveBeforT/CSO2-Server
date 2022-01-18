@@ -10,6 +10,7 @@ const (
 )
 
 var (
+	CSO2_ServerMessage_SysError                    = []byte("#CSO2_ServerMessage_SysError")
 	GAME_SERVER_ERROR                    = []byte("#CSO2_ServerMessage_ServerDown")
 	GAME_LOGIN_ALREADY                   = []byte("您的账号当前已经有人登录！如果你的账号已泄露请联系管理员！")
 	GAME_LOGIN_EXIT_FORCE                = []byte("您的账号当前有人登录！您已被强制退出！")
